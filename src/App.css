@@ -1,4 +1,12 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+ */
