@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/astronomy-Makers/static/css/main.cd871fa8.css",
+    "main.js": "/astronomy-Makers/static/js/main.bc5b2e37.js",
+    "index.html": "/astronomy-Makers/index.html",
+    "main.cd871fa8.css.map": "/astronomy-Makers/static/css/main.cd871fa8.css.map",
+    "main.bc5b2e37.js.map": "/astronomy-Makers/static/js/main.bc5b2e37.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd871fa8.css",
+    "static/js/main.bc5b2e37.js"
+  ]
+}
