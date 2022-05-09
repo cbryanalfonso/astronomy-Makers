@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import axios from "axios"; /* 
-import { ResponseAstronomy, Siguiente } from '../../Api/Interfaces'; */
+import axios from "axios"; 
 import "./Home.css";
 import { AstronomyAPI, Result } from "../../Api/Interfaces";
 
