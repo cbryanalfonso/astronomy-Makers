@@ -77,6 +77,7 @@
     border-radius: 50px;
     text-decoration: none;
     color: aliceblue;
+    cursor: pointer;
 }
 .inner:hover{
     padding: 2%;

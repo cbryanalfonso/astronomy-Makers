@@ -1,43 +1,30 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { ResponseAstronomy } from "../../Api/Interfaces";
+import React, { useEffect, useRef, useState } from "react";
+import axios from "axios"; /* 
+import { ResponseAstronomy, Siguiente } from '../../Api/Interfaces'; */
 import "./Home.css";
+import { AstronomyAPI, Result } from "../../Api/Interfaces";
 
 export const Home = () => {
-  const [data, setData] = useState<ResponseAstronomy[]>([]);
+  const [data, setData] = useState<Result[]>([]);
+  const page = useRef(1);
+  const [urlAPI, setUrlAPI] = useState(
+    `https://astroapinodejs.herokuapp.com/astronomy?page=1&limit=9`
+  );
 
   useEffect(() => {
-    /*  fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=TXHC9of2v9UDWyRGhdCAz6KQYIs96FKATjEZYkFh&count=5"
-    )
-      .then((response) => response.json())
-      .then((result) => {
-          if(result){
-              setData(result);
-              //console.log(result)
-          }
-      })
-      .catch((error) => console.log("error", error)); */
-
     loadAstronomy();
-  }, []);
+  }, [urlAPI]);
 
   const loadAstronomy = async () => {
-    const resp = await axios.get(
-      "https://api.nasa.gov/planetary/apod?api_key=TXHC9of2v9UDWyRGhdCAz6KQYIs96FKATjEZYkFh&count=9"
-    );
-
-    //console.log(resp.data);
-    //setData(resp.data)
-    //mapAPIList(resp.data)
-    setData(resp.data);
+    const resp = await axios.get<AstronomyAPI>(urlAPI);
+    setData(resp.data.results);
   };
 
-  const mapAPIList = (astronomyList: ResponseAstronomy[]) => {
+  /* const mapAPIList = (astronomyList: Result[]) => {
     return astronomyList.map(function (datos, i) {
       return (
         <div key={i}>
-          {/* <p>{datos}</p> */}
+           <p>{datos}</p> 
           <br />
         </div>
       );
@@ -55,12 +42,12 @@ export const Home = () => {
             width: "10%",
           }}
         >
-          <p>{datos.date}</p>
+          <p>{datos.title}</p>
           <br />
         </div>
       );
     });
-  };
+  }; */
 
   const imprimirAstronomy = () => {
     return data.map(function (datos, i) {
@@ -80,12 +67,34 @@ export const Home = () => {
       <ul className="nav-menu11">{imprimirAstronomy()}</ul>
       <br />
       <div id="outer">
-        <a href="" className="inner">
-          Anterior
-        </a>
-        <a href="" className="inner">
-          Siguiente
-        </a>
+        {page.current < 2 ? null : (
+          <button
+            className="inner"
+            onClick={() => {
+              page.current = page.current - 1;
+              console.log(page.current);
+              setUrlAPI(
+                `https://astroapinodejs.herokuapp.com/astronomy?page=${page.current}&limit=9`
+              );
+            }}
+          >
+            Anterior
+          </button>
+        )}
+        {page.current < 12 ? (
+          <button
+            className="inner"
+            onClick={() => {
+              page.current = page.current + 1;
+              console.log(page.current)
+              setUrlAPI(
+                `https://astroapinodejs.herokuapp.com/astronomy?page=${page.current}&limit=9`
+              );
+            }}
+          >
+            Siguiente
+          </button>
+        ) : null}
       </div>
     </div>
   );
