@@ -25,6 +25,27 @@
 .img img {
   width: 100%;
 }
+
+.barraSearch{
+  /* display: grid;
+  grid-template-columns: repeat(2, auto); */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+ justify-content: center;
+}
+
+.btn-width{
+  width: auto;
+  margin-left: 5px;
+}
+
+.btn-search{
+  width: 50%;
+}
+
 @media all and (min-width: 500px) and (max-width: 960px) {
   .img {
     margin: 20px auto;
