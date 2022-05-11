@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/astronomy-Makers/static/css/main.cd871fa8.css",
-    "main.js": "/astronomy-Makers/static/js/main.bc5b2e37.js",
+    "main.css": "/astronomy-Makers/static/css/main.9ccae124.css",
+    "main.js": "/astronomy-Makers/static/js/main.5af1e02f.js",
     "index.html": "/astronomy-Makers/index.html",
-    "main.cd871fa8.css.map": "/astronomy-Makers/static/css/main.cd871fa8.css.map",
-    "main.bc5b2e37.js.map": "/astronomy-Makers/static/js/main.bc5b2e37.js.map"
+    "main.9ccae124.css.map": "/astronomy-Makers/static/css/main.9ccae124.css.map",
+    "main.5af1e02f.js.map": "/astronomy-Makers/static/js/main.5af1e02f.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd871fa8.css",
-    "static/js/main.bc5b2e37.js"
+    "static/css/main.9ccae124.css",
+    "static/js/main.5af1e02f.js"
   ]
 }
