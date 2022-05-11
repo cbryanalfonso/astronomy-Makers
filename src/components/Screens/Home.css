@@ -11,6 +11,18 @@
   margin-left: 0%;
   padding-left: 0%;
 }
+.error {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #3acbf7;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: row;
+}
+.errorParrafo{
+  font-size: 3rem;
+}
 .img {
   margin: 10px auto;
   border-radius: 5px;
@@ -37,6 +49,18 @@
  justify-content: center;
 }
 
+.barraSearchFilters{
+  /* display: grid;
+  grid-template-columns: repeat(2, auto); */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+ justify-content: center;/* 
+ background-color: #3acbf7; */
+}
+
 .btn-width{
   width: auto;
   margin-left: 5px;
@@ -45,6 +69,130 @@
 .btn-search{
   width: 50%;
 }
+.separacion{
+  margin-left: 10px;
+}
+
+.flexrow{
+  display: flex; flex-direction: row
+}
+
+.colorModa{
+  background: #732119;
+}
+
+
+/* 
+MODAL */
+
+
+/****** VENTANA MODAL ******/
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 80%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.close {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #00d9ff;
+}
+
+.alinearModalImg {
+  display: flex;
+  flex: 0.5;
+  justify-content: center;
+}
+.alinearModalData {
+  display: flex;
+  flex: 1.5;
+ /*  justify-content: center; */
+  flex-direction: column;
+}
+.colorPokemon {
+  width: auto;
+  background: linear-gradient(90deg, rgba(110,94,254) 0%, rgba(73,63,252,1) 100%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.centrarTextoPokemonModal {
+  color: white;
+  font-weight: bold;
+  font-size: 42;
+  text-align: center;
+  padding-top: 1rem;
+   /* background: white;  */
+  min-width: 40%;
+}
+.abilitiesModal {
+  width: 80%;
+  position: relative;
+  border-radius: 15px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  padding: 10px;
+}
+
+.centrarTitleModal{
+  align-self: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.bodyModal{
+  padding-left: 4%;
+  padding-right: 3%;
+}
+
+
 
 @media all and (min-width: 500px) and (max-width: 960px) {
   .img {
@@ -57,6 +205,38 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+  .modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modalDialog > div {
+    width: 97%;
+    height: auto;
+    position: relative;
+    margin: 3% auto;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
   }
 }
 .img img {
