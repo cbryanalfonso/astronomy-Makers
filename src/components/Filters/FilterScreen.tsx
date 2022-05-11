@@ -9,14 +9,15 @@ export const FilterScreen = () => {
 
   return (
     <div className="btn-group">
-      <p>Filtrado ...</p>
+     
+     {/*  <p>Filtrado ...</p>
       <select name="pastel" id="pastel">
         <option value="Natural">3 Leches Natural</option>
         <option value="LecheChocolate">3 Leches con Chocolate</option>
         <option value="LecheKashlua">3 Leches con Kashlua</option>
         <option value="LecheFruta">3 Leches con Fruta</option>
         
-      </select>
+      </select> */}
 
       {/*  <button type="button" 
       className="btn btn-info dropdown-toggle"
